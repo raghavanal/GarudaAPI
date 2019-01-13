@@ -10,6 +10,7 @@
   			<spring-framework.version>5.1.4.RELEASE</spring-framework.version>
   			<logback.version>1.0.13</logback.version>
 			<slf4j.version>1.7.5</slf4j.version>
+			<joda-time.version>2.3</joda-time.version>
   </properties>
   <dependencies>
   <!-- Spring and Transactions -->
@@ -36,12 +37,13 @@
 			<version>${spring-framework.version}</version>
 		</dependency>
 		
-		<!-- MySQL Driver -->
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>5.0.5</version>
+  			  <groupId>mysql</groupId>
+   			  <artifactId>mysql-connector-java</artifactId>
+  			  <version>8.0.13</version>
 		</dependency>
+
 
 		<!-- Logging with SLF4J & LogBack -->
 		<dependency>
@@ -56,5 +58,18 @@
 			<version>${logback.version}</version>
 			<scope>runtime</scope>
 		</dependency>
+		  <!-- Joda-Time -->
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>${joda-time.version}</version>
+        </dependency>
+
+        <!-- To map JodaTime with database type -->
+        <dependency>
+            <groupId>org.jadira.usertype</groupId>
+            <artifactId>usertype.core</artifactId>
+            <version>3.0.0.CR1</version>
+        </dependency>
   </dependencies>
 </project>
